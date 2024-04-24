@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://e1.pxfuel.com/desktop-wallpaper/700/844/desktop-wallpaper-blue-color-backgrounds-plane-colour-background.jpg"); /* Replace URL with the actual image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+        }
+
+        .display {
+            width: calc(100% - 10px); /* Adjusted width to account for padding */
+            height: 50px;
+            margin-bottom: 10px;
+            text-align: right;
+            font-size: 24px;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ccc;
+        }
+
+        .operator {
+            background-color: #FFA07A; /* Light Salmon */
+            color: #fff;
+        }
+
+        .clear {
+            background-color: #87CEEB; /* Sky Blue */
+            color: #fff;
+        }
+
+        .equal {
+            background-color: #7CFC00; /* Lawn Green */
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+        <button onclick="addToDisplay('7')">7</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('9')">9</button>
+        <button class="operator" onclick="addOperator('+')">+</button> <!-- Added class for operators -->
+        <button onclick="addToDisplay('4')">4</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('6')">6</button>
+        <button class="operator" onclick="addOperator('-')">-</button>
+        <button onclick="addToDisplay('1')">1</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('3')">3</button>
+        <button class="operator" onclick="addOperator('*')">*</button>
+        <button onclick="addToDisplay('0')">0</button>
+        <button class="clear" onclick="clearDisplay()">C</button> <!-- Added class for clear button -->
+        <button class="equal" onclick="calculateResult()">=</button> <!-- Added class for equal button -->
+        <button class="operator" onclick="addOperator('/')">/</button>
+    </div>
+</div>
+
+<script src="script.js"></script> <!-- Linking to external JavaScript file -->
+
+</body>
+</html>
