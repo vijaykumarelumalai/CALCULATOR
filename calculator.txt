@@ -1,0 +1,24 @@
+1. **HTML Structure**:
+   - `<!DOCTYPE html>`: Declares the document type and version of HTML being used.
+   - `<html lang="en">`: Defines the document's root element with the language set to English.
+   - `<head>`: Contains meta tags for character set, viewport settings, and the page title.
+   - `<body>`: Contains the content of the web page.
+
+2. **Styling**:
+   - The `<style>` block contains CSS rules for styling various elements of the calculator.
+   - The `body` element is styled to have a background image fetched from the specified URL. The image is set to cover the entire viewport without repeating.
+   - The `.calculator` class styles the container for the calculator, setting its width, margin, border, border radius, padding, box shadow, and background color.
+   - The `.display` class styles the display area of the calculator, including its width, height, margin, text alignment, font size, padding, border, border radius, and background color.
+   - The `.buttons` class styles the grid layout for the calculator buttons using CSS Grid, specifying the number of columns and the gap between them.
+   - The `button` element styles define the appearance of all buttons, including their width, padding, font size, border, border radius, background color, and hover effect.
+   - Additional classes like `.operator`, `.clear`, and `.equal` are used to style specific types of buttons with different background colors.
+
+3. **Calculator Interface**:
+   - Inside the `.calculator` div, there's a display area with the class `display` and an id `display`, initially showing "0".
+   - Below the display area, there's a grid of buttons arranged using CSS Grid.
+   - Each button is represented by a `<button>` element with an `onclick` attribute that triggers JavaScript functions when clicked.
+   - The buttons include digits (0-9), arithmetic operators (+, -, *, /), a clear button (C), and an equal button (=).
+
+4. **JavaScript**:
+   - The JavaScript functionality for the calculator is expected to be included in an external script file referenced at the bottom of the HTML document using the `<script>` tag with the `src` attribute set to "script.js". However, the actual script content is not provided in the code snippet.
+
